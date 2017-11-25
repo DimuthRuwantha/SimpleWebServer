@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail form</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    <div class="form-inline">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                <label class="control-label col-sm-4">{{ field }}</label>
+{#                <div class="col-sm-2">{{ field }}</div>#}
+                <input type="text" class="form-control"/>
+            </div>
+        {% endfor %}
+    </div>
+    <div>
+        <button class="btn btn-success" type="submit">submit</button>
+    </div>
+</form>
+</body>
+</html>

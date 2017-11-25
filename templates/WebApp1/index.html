@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"#}
+    {#          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">#}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body style="background-color: #3c3f41">
+<div class="container">
+    <h2 style="color: azure">Power System Fault Detection</h2>
+    <svg style="background-color: white" width="500px" height="300">
+        <circle cx="50" cy="50" r="40" stroke="red" stroke-width="4" fill="yellow"></circle>
+        <rect x="100" y="10" width="50" height="50"
+              style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9"></rect>
+        <ellipse cx="250" cy="60" rx="100" ry="50" style="fill: yellow; stroke:purple; stroke-width: 2"></ellipse>
+        <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2"></line>
+        <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1"></polygon>
+        <polyline points="20,20 40,25 60,40 80,120 120,140 200,180"
+                  style="fill:none;stroke:black;stroke-width:3"></polyline>
+        <text x="200" y="15" fill="red" transform="rotate(30 20,40)">I love SVG</text>
+    </svg>
+<form action="index.html" method="post">
+    <input type="text" name="dim" id="id_username" />
+    <input type="submit" class="btn btn-primary" value="Favorite" />
+</form>
+
+    {% if  name %}
+        <h4>{{ name }}</h4>
+    {% endif %}
+</div>
+</body>
+</html>
